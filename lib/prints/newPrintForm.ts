@@ -38,7 +38,7 @@ export default async function newPrintForm(formData: FormData) {
     for(const photo of photos!) {
         const buffer = Buffer.from(await photo.arrayBuffer())
         const picPath = path.join(printPath, "pictures", `${i}.${photo.name.split(".").pop()}`)
-        await fs.mkdir(printPath, "pictures");
+        await fs.mkdir(path.join(printPath, "pictures"), {recursive: true});
         await fs.writeFile(picPath, buffer)
         i++
     }
