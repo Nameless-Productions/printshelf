@@ -11,13 +11,13 @@ export default function NewPrintModal({ closeBtnOnClick }: { closeBtnOnClick: ()
             <input type="text" name='title' placeholder='Title' className='inp-normal w-full mb-3' required />
             <textarea name="description" placeholder='Description (Ex.: Print parameters, what it does)' className='inp-normal mb-3 w-full' required></textarea>
             <label htmlFor="stl">STL file:</label>
-            <input type="file" className='inp-normal cursor-pointer mb-3' accept='.stl' id='stl' required />
+            <input type="file" className='inp-normal cursor-pointer mb-3' name='stl' accept='.stl' id='stl' required />
 
             <label htmlFor="gcode">GCODE file:</label>
-            <input type="file" className='inp-normal cursor-pointer mb-3' accept='.gcode' id='gcode' required />
+            <input type="file" className='inp-normal cursor-pointer mb-3' name='gcode' accept='.gcode' id='gcode' required />
 
             <label htmlFor="photos">Photos: (optional)</label>
-            <input type="file" multiple className='inp-normal cursor-pointer mb-3 w-full' accept='image/*' id='photos' />
+            <input type="file" multiple className='inp-normal cursor-pointer mb-3 w-full' name='photod' accept='image/*' id='photos' />
 
             <textarea name="info" placeholder='How the printing went (optional, can set later)' className='inp-normal w-full'></textarea>
             <br />

@@ -16,7 +16,5 @@ model Prints {
   id          Int     @id @default(autoincrement())
   title       String  @unique
   description String
-  gcodePath   String
-  stlPath     String
   info        String?
 }
