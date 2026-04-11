@@ -15,7 +15,7 @@ export default async function PrintViewerPage({ params }: { params: { id: number
     <b>Images: </b>
     {
         print.imageUrls.map((i) => (
-            <Image src={i} alt='image' width={100} height={100}></Image>
+            <Image key={i} src={i} alt='image' width={100} height={100}></Image>
         ))
     }
   </>)
