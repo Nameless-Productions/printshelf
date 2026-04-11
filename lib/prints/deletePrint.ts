@@ -4,7 +4,7 @@ import path from "path";
 import { db } from "../db";
 import fs from "fs/promises"
 
-export async function deletePrint(id: string) {
+export async function deletePrint(id: number) {
     const print = await db.prints.findUnique({
         where: {
             id: Number(id)
