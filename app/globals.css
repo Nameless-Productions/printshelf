@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+.btn-green {
+    @apply bg-green-700 p-0.5 rounded-xl cursor-pointer hover:bg-green-800 duration-300
+}
+
+.inp-normal {
+    @apply border rounded-xl bg-neutral-400 p-1 text-black
+}
