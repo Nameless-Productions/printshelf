@@ -16,6 +16,9 @@ export default function NewPrintModal({ closeBtnOnClick }: { closeBtnOnClick: ()
             <label htmlFor="gcode">GCODE file:</label>
             <input type="file" className='inp-normal cursor-pointer mb-3' accept='.gcode' id='gcode' required />
 
+            <label htmlFor="photos">Photos: (optional)</label>
+            <input type="file" multiple className='inp-normal cursor-pointer mb-3 w-full' accept='image/*' id='photos' />
+
             <textarea name="info" placeholder='How the printing went (optional, can set later)' className='inp-normal w-full'></textarea>
             <br />
             <input type="submit" value="Create Print" className='btn-green' />
