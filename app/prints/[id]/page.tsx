@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import React from 'react'
+import DeleteButton from './DeleteButton';
 
 export default async function PrintViewerPage({ params }: { params: { id: number } }) {
     const {id} = await params;
@@ -14,7 +15,9 @@ export default async function PrintViewerPage({ params }: { params: { id: number
     <p><b>Info:</b> <br />{print.info}</p>
     <Link href={`/prints/${id}/gcode`}><button className='btn-green mb-3'>GCODE file</button></Link>
     <br />
-    <Link href={`/prints/${id}/stl`}><button className='btn-green'>STL file</button></Link>
+    <Link href={`/prints/${id}/stl`}><button className='btn-green mb-3'>STL file</button></Link>
+    <br />
+    <DeleteButton id={id} />
     <br />
     <b>Images: </b>
     {
