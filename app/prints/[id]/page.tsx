@@ -18,6 +18,8 @@ export default async function PrintViewerPage({ params }: { params: { id: number
     <br />
     <Link href={`/prints/${id}/stl`}><button className='btn-green mb-3'>STL file</button></Link>
     <br />
+    <Link href={`/prints/${id}/edit`}><button className='btn-green mb-3'>Edit</button></Link>
+    <br />
     <DeleteButton id={id} />
     <br />
     <b>STL Viewer:</b>
