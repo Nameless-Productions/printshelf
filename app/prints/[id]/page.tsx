@@ -20,10 +20,12 @@ export default async function PrintViewerPage({ params }: { params: { id: number
     <DeleteButton id={id} />
     <br />
     <b>Images: </b>
-    {
-        print.imageUrls.map((i) => (
-            <Image key={i} src={i} alt='image' width={100} height={100}></Image>
-        ))
-    }
+    <div className='not-prose flex flex-wrap gap-2 items-start'>
+      {
+          print.imageUrls.map((i) => (
+              <Image key={i} src={i} alt='image' width={200} height={200} className='rounded w-auto h-auto shrink-0'></Image>
+          ))
+      }
+    </div>
   </>)
 }
