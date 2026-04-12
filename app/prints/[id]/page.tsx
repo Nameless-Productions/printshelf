@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import React from 'react'
 import DeleteButton from './DeleteButton';
+import STLviewer from './STLviewer';
 
 export default async function PrintViewerPage({ params }: { params: { id: number } }) {
     const {id} = await params;
@@ -18,6 +19,9 @@ export default async function PrintViewerPage({ params }: { params: { id: number
     <Link href={`/prints/${id}/stl`}><button className='btn-green mb-3'>STL file</button></Link>
     <br />
     <DeleteButton id={id} />
+    <br />
+    <b>STL Viewer:</b>
+    <STLviewer url={`/prints/${id}/stl`}/>
     <br />
     <b>Images: </b>
     <div className='not-prose flex flex-wrap gap-2 items-start'>
