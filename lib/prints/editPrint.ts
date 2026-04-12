@@ -29,4 +29,5 @@ export async function editPrintForm(formData: FormData) {
     if(!id || !description || !info) return redirect(`/prints/${id}/edit?error=All fields are required`)
 
     await editPrint(Number(id), String(info), String(description))
+    redirect(`/prints/${id}`)
 }
